@@ -84,6 +84,7 @@ def visualizar_informacoes_time(time_nome):
         return
 
     estadio = time.estadio
+    print('====================================================================================')
     print(f'Informações do Time: {time.nome} (Orçamento: ${time.dinheiro:.2f})')
     if estadio:
         print(f'Estádio: {estadio.nome}, Capacidade: {estadio.capacidade}')
@@ -181,15 +182,18 @@ def main():
 
         opcao = input('Opção: ')
         if opcao == '1':
+            print('====================================================================================')
             nome = input('Nome do Time: ')
             dinheiro = float(input('Dinheiro do Time: $'))
             adicionar_time(nome, dinheiro)
         elif opcao == '2':
+            print('====================================================================================')
             nome = input('Nome do Estádio: ')
             capacidade = int(input('Capacidade do Estádio: '))
             time_mandante_nome = input('Nome do Time Mandante: ')
             adicionar_estadio(nome, capacidade, time_mandante_nome)
         elif opcao == '3':
+            print('====================================================================================')
             nome = input('Nome do Jogador: ')
             numero_camisa = int(input('Número da Camisa: '))
             posicao = input('Posição do Jogador: ')
@@ -197,25 +201,30 @@ def main():
             time_nome = input('Nome do Time: ')
             adicionar_jogador(nome, numero_camisa, posicao, preco, time_nome)
         elif opcao == '4':
+            print('====================================================================================')
             time_nome = input('Nome do Time: ')
             visualizar_informacoes_time(time_nome)
         elif opcao == '5':
+            print('====================================================================================')
             jogador_nome = input('Nome do Jogador: ')
             novo_time_nome = input('Nome do Novo Time: ')
             contratar_jogador(jogador_nome, novo_time_nome)
         elif opcao == '6':
+            print('====================================================================================')
             jogador_nome = input('Nome do Jogador: ')
             excluir_jogador(jogador_nome)
         elif opcao == '7':
+            print('====================================================================================')
             jogador_nome = input('Nome do Jogador: ')
             novo_preco = float(input('Novo Preço: $'))
             alterar_preco_jogador(jogador_nome, novo_preco)
         elif opcao == '8':
+            print('====================================================================================')
             time1_nome = input('Nome do Time 1: ')
             time2_nome = input('Nome do Time 2: ')
+            print('====================================================================================')
             simular_jogo(time1_nome, time2_nome)
         elif opcao == '9':
-            print('Obrigado pela atenção!')
             break
         else:
             print('Opção inválida. Tente novamente.')
